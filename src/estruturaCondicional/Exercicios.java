@@ -12,22 +12,25 @@ public class Exercicios
 		Scanner sc = new Scanner(System.in);
 		
 		/*
-		 * Fazer um programa para ler um número inteiro 
-		 * e dizer se este número é par ou ímpar.
+		 * Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem 
+		 * "Sao Multiplos" ou "Nao sao Multiplos",
+		 *  indicando se os valores lidos são múltiplos entre si. Atenção: 
+		 *  os números devem poder ser digitados emordem crescente ou decrescente.
 		 */
 		
-		System.out.println("Exercicio 02");
-		int a;
+		System.out.println("Exercicio 03");
+		int a,b;
 		
 		a = sc.nextInt();
+		b = sc.nextInt();
 		
-		if (a % 2 == 0) 
+		if (a % b == 0 || b % a ==0) 
 		{
-			System.out.println("par");
+			System.out.println("são multiplos");
 		}
 		else
 		{
-			System.out.println("impar");
+			System.out.println("não são multiplos");
 		}
 		
 		sc.close();
