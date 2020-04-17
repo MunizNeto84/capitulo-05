@@ -12,28 +12,44 @@ public class Exercicios
 		Scanner sc = new Scanner(System.in);
 		
 		/*
-		 * Leia a hora inicial e a hora final de um jogo. 
-		 * A seguir calcule a duração do jogo, sabendo que o mesmo pode 
-		 * começar em um dia e terminar em outro, tendo uma duração 
-		 * mínima de 1 hora e máxima de 24 horas.
+		 * Com base na tabela abaixo, escreva um programa que leia o código
+		 * e um item e a quantidade deste item. A seguir, calcule
+		 * e mostre o valor da conta a pagar.
 		 */
 		
-		System.out.println("Exercicio 04");
-		int a, b, dura;
+		System.out.println("Exercicio 05");
+		int cod, qtd;
+		double total=0;
 		
-		a = sc.nextInt();
-		b = sc.nextInt();
+		cod = sc.nextInt();
+		qtd = sc.nextInt();
 		
-		if (a<b) 
+		if (cod==1) 
 		{
-			dura = b-a;
+			total = 4.00 * qtd;
+		}
+		else if (cod == 2)
+		{
+			total = 4.50 * qtd;
+		}
+		else if (cod == 3)
+		{
+			total = 5.00 * qtd;
+		}
+		else if (cod == 4 )
+		{
+			total = 2.00 * qtd;
+		}
+		else if (cod == 5)
+		{
+			total = 1.50 * qtd;
 		}
 		else
 		{
-			dura = 24 -a + b;
+			System.out.println("Cod inválido");
 		}
 		
-		System.out.println("o jogo durou: "+ dura +" hora(s)");
+		System.out.printf("Total R$ %.2f", total);
 		
 		sc.close();
 	}
