@@ -12,44 +12,37 @@ public class Exercicios
 		Scanner sc = new Scanner(System.in);
 		
 		/*
-		 * Com base na tabela abaixo, escreva um programa que leia o código
-		 * e um item e a quantidade deste item. A seguir, calcule
-		 * e mostre o valor da conta a pagar.
+		 * Você deve fazer um programa que leia um valor qualquer e apresente
+		 * uma mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75], (75,100])
+		 * este valor se encontra. Obviamente se o valor 
+		 * não estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
 		 */
 		
-		System.out.println("Exercicio 05");
-		int cod, qtd;
-		double total=0;
+		System.out.println("Exercicio 06");
+		double a;
 		
-		cod = sc.nextInt();
-		qtd = sc.nextInt();
-		
-		if (cod==1) 
+		a = sc.nextDouble();
+
+		if ((a >= 0) && (a <=25)) 
 		{
-			total = 4.00 * qtd;
+			System.out.println("Intervalo [0,25]");;
 		}
-		else if (cod == 2)
+		else if ((a > 25) && (a <=50)) 
 		{
-			total = 4.50 * qtd;
+			System.out.println("Intervalo [25,50]");;
 		}
-		else if (cod == 3)
+		else if ((a > 50) && (a <=75)) 
 		{
-			total = 5.00 * qtd;
+			System.out.println("Intervalo [50,75]");;
 		}
-		else if (cod == 4 )
+		else if ((a > 75) && (a <=100)) 
 		{
-			total = 2.00 * qtd;
-		}
-		else if (cod == 5)
-		{
-			total = 1.50 * qtd;
+			System.out.println("Intervalo [75,100]");;
 		}
 		else
 		{
-			System.out.println("Cod inválido");
+			System.out.println("Fora do intervalo");
 		}
-		
-		System.out.printf("Total R$ %.2f", total);
 		
 		sc.close();
 	}
