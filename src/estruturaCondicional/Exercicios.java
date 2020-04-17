@@ -11,18 +11,23 @@ public class Exercicios
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Exercicio 01");
+		/*
+		 * Fazer um programa para ler um número inteiro 
+		 * e dizer se este número é par ou ímpar.
+		 */
+		
+		System.out.println("Exercicio 02");
 		int a;
 		
 		a = sc.nextInt();
 		
-		if (a >= 0) 
+		if (a % 2 == 0) 
 		{
-			System.out.println("Não Negativo");
+			System.out.println("par");
 		}
 		else
 		{
-			System.out.println("Negativo");
+			System.out.println("impar");
 		}
 		
 		sc.close();
