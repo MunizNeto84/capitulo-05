@@ -12,26 +12,28 @@ public class Exercicios
 		Scanner sc = new Scanner(System.in);
 		
 		/*
-		 * Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem 
-		 * "Sao Multiplos" ou "Nao sao Multiplos",
-		 *  indicando se os valores lidos são múltiplos entre si. Atenção: 
-		 *  os números devem poder ser digitados emordem crescente ou decrescente.
+		 * Leia a hora inicial e a hora final de um jogo. 
+		 * A seguir calcule a duração do jogo, sabendo que o mesmo pode 
+		 * começar em um dia e terminar em outro, tendo uma duração 
+		 * mínima de 1 hora e máxima de 24 horas.
 		 */
 		
-		System.out.println("Exercicio 03");
-		int a,b;
+		System.out.println("Exercicio 04");
+		int a, b, dura;
 		
 		a = sc.nextInt();
 		b = sc.nextInt();
 		
-		if (a % b == 0 || b % a ==0) 
+		if (a<b) 
 		{
-			System.out.println("são multiplos");
+			dura = b-a;
 		}
 		else
 		{
-			System.out.println("não são multiplos");
+			dura = 24 -a + b;
 		}
+		
+		System.out.println("o jogo durou: "+ dura +" hora(s)");
 		
 		sc.close();
 	}
