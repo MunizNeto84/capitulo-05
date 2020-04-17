@@ -12,36 +12,42 @@ public class Exercicios
 		Scanner sc = new Scanner(System.in);
 		
 		/*
-		 * Você deve fazer um programa que leia um valor qualquer e apresente
-		 * uma mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75], (75,100])
-		 * este valor se encontra. Obviamente se o valor 
-		 * não estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
+		 * Leia 2 valores com uma casa decimal (x e y),
+		 * que devem representar as coordenadas 
+		 * de um ponto em um plano. A seguir, determine qual
+		 * o quadrante ao qual pertence o
+		 * ponto, ou se está sobre um dos eixos cartesianos
+		 * ou na origem (x = y = 0).
+		 * Se o ponto estiver na origem, escreva a mensagem “Origem”.
+		 * Se o ponto estiver sobre um dos eixos escreva 
+		 * “Eixo X” ou “Eixo Y”, conforme for asituação.
 		 */
 		
-		System.out.println("Exercicio 06");
-		double a;
+		System.out.println("Exercicio 07");
+		double x,y;
 		
-		a = sc.nextDouble();
+		x = sc.nextDouble();
+		y = sc.nextDouble();
 
-		if ((a >= 0) && (a <=25)) 
+		if ((x > 0) && (y > 0)) 
 		{
-			System.out.println("Intervalo [0,25]");;
+			System.out.println("Q1");
 		}
-		else if ((a > 25) && (a <=50)) 
+		else if ((x < 0) && (y > 0)) 
 		{
-			System.out.println("Intervalo [25,50]");;
+			System.out.println("Q2");
 		}
-		else if ((a > 50) && (a <=75)) 
+		else if ((x < 0) && (y < 0)) 
 		{
-			System.out.println("Intervalo [50,75]");;
+			System.out.println("Q3");
 		}
-		else if ((a > 75) && (a <=100)) 
+		else if ((x > 0) && (y < 0)) 
 		{
-			System.out.println("Intervalo [75,100]");;
+			System.out.println("Q4");
 		}
 		else
 		{
-			System.out.println("Fora do intervalo");
+			System.out.println("Origen");
 		}
 		
 		sc.close();
